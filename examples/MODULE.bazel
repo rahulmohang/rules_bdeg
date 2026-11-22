@@ -17,9 +17,10 @@ module(name = "rules_bdeg_examples")
 
 # Use local rules_bdeg
 bazel_dep(name = "rules_bdeg", version = "0.0.0")
-local_path_override(
+git_override(
     module_name = "rules_bdeg",
-    path = "..",
+    remote = "https://github.com/eclipse-hephaestus/rules_bdeg.git",
+    commit = "ef19e843e827aff6920d9c9086d46e13cf5ff096",
 )
 
 # C++ rules
